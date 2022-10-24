@@ -1,5 +1,9 @@
 {
-  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
+//  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
+  "name": "ESPM-157 Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },	
   "customizations": {
     "vscode": {
       "settings": {
@@ -13,20 +17,17 @@
       "extensions": ["reditorsupport.r", "rdebugger.r-debugger"]
     }
   },
-  
-  
-
-	// Forward Jupyter and RStudio ports
-	"forwardPorts": [8787],
-	"portsAttributes": {
-		"8787": {
-			"label": "Rstudio",
-			"requireLocalPort": true,
-			"onAutoForward": "ignore"
-		}
-	},
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo rstudio-server start",
-  
+  // Forward Jupyter and RStudio ports
+  "forwardPorts": [8787],
+  "portsAttributes": {
+	"8787": {
+		"label": "Rstudio",
+		"requireLocalPort": true,
+		"onAutoForward": "ignore"
+	}
+  },
+	  
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "sudo rstudio-server start",
   "remoteUser": "rstudio"
 }
