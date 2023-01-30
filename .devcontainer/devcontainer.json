@@ -14,7 +14,7 @@
           "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
         }
       },
-      "extensions": ["reditorsupport.r", "rdebugger.r-debugger"]
+      "extensions": ["reditorsupport.r", "rdebugger.r-debugger", "quarto"]
     }
   },
   // Forward Jupyter and RStudio ports
